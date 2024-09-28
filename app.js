@@ -8,6 +8,8 @@ const connectDB = require('./dataBase')
 
 const authRouter = require('./routes/userRoutes')
 
+const cors = require('cors')
+
 
 
 
@@ -20,6 +22,7 @@ app.listen(PORT, ()=>{
 
 
 app.use(express.json())
+app.use(cors()) 
 
 connectDB()
 
